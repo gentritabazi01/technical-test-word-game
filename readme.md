@@ -40,3 +40,10 @@ This challenge is to implement functions of a word game which takes user-submitt
     normally use to complete production-quality code.
 19. However, please bear in mind that this test is intended to allow you to show your ability with pure PHP, rather
     than your skill in utilising frameworks and libraries.
+
+
+### How to run
+
+```bash
+php WordGame.php
+```
