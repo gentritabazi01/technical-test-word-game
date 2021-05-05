@@ -72,21 +72,21 @@ class WordGame
     {
         // Exit the game if the input is 'quit!' is entered
         if ($word == 'quit!') {
-            echo "\n\nGood bye Thank you for playing!\n\n";
+            echo "\n\n✋ Good bye Thank you for playing!\n\n";
             exit();
         }
 
-        echo "\n\nChecking your answer '" . $word . "' ...\n\n";
+        echo "\n\n⌛ Checking your answer '" . $word . "' ...\n\n";
 
         if (empty($word)) {
-            echo "\n\nLooks like you submitted too early - try again?\n\n";
+            echo "\n\n🙄 Looks like you submitted too early - try again?\n\n";
             return 0;
         } elseif ($this->checkValidity($word)) {
             $points = strlen($word);
-            echo "\n\nGood Guess! '" . $word . "' scores you " . $points . " points!\n\n";
+            echo "\n\n🎉 Good Guess! '" . $word . "' scores you " . $points . " points!\n\n";
             return $points;
         } else {
-            echo "\n\nUnlucky - '" . $word . "' is not a valid word!\n\n";
+            echo "\n\n😒 Unlucky - '" . $word . "' is not a valid word!\n\n";
             return 0;
         }
     }
@@ -262,9 +262,9 @@ class WordGame
     private function checkHighScores($word, $points)
     {
         if (array_key_exists($word, $this->highScores)) {
-            echo "\n\nUnlucky, " . $word . " is already in our list of high scores so it can't be added this time!\n\n";
+            echo "\n\n😒 Unlucky, " . $word . " is already in our list of high scores so it can't be added this time!\n\n";
         } else {
-            echo "\n\n 🎉 Congratulations - " . $word . " is a unique answer! Your guess has been added to our list of high scores!!!!\n\n";
+            echo "\n\n🎉 Congratulations - " . $word . " is a unique answer! Your guess has been added to our list of high scores!!!!\n\n";
 
             // Add entry to high scores
             $this->highScores[$word] = $points;
@@ -286,13 +286,9 @@ class WordGame
             }
 
             $index = count($this->highScores) - 1;
-            echo "\n High Scores Count: " . count($this->highScores) . "\n";
-            echo "\n Word Entry: " . $this->getWordEntryAtPosition($index) . "\n";
-            echo "\n Points Scored: " . $this->getScoreAtPosition($index) . "\n";
-
-            echo "\n\n";
-            var_dump($this->highScores);
-            echo "\n\n";
+            echo "\n🤙 High Scores Count: " . count($this->highScores) . "\n";
+            echo "\n🤙 Word Entry: " . $this->getWordEntryAtPosition($index) . "\n";
+            echo "\n🤙 Points Scored: " . $this->getScoreAtPosition($index) . "\n";
         }
     }
 }
