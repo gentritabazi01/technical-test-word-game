@@ -1,6 +1,6 @@
 ### Word Game
 
-Create an application to deliver a word game
+Create an application to deliver a word game.
 
 This challenge is to implement functions of a word game which takes user-submitted words, scores them, and maintains a high-score list. As the challenge is only to test your PHP skills, rather than storing the high-score table in a database, we’ll just save it in memory, and we’ll simulate the user entering words by calling the relevant functions within the script.
 
