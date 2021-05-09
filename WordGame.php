@@ -147,14 +147,12 @@ class WordGame
         
         if (!file_exists($filePath)) {
             throw new Exception('The file '. $filePath. ' does not exist');
-            exit;
         }
 
         $size = filesize($filePath);
 
         if (empty($size)) {
             throw new Exception('The wordslist.txt file is empty.');
-            exit;
         }
         
         $this->words = file($filePath, FILE_IGNORE_NEW_LINES);
