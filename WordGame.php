@@ -5,17 +5,17 @@ class WordGame
     /**
      * The filename of the file containing all of the valid words
      */
-    const WORDS_FILE = 'wordlist.txt';
+    private const WORDS_FILE = 'wordlist.txt';
 
     /**
      * The length of base string used at the beginning of each new game
      */
-    const BASE_STRING_LENGTH = 10;
+    private const BASE_STRING_LENGTH = 10;
 
     /**
      * The number of high scores that are allowed to be kept
      */
-    const HIGH_SCORES_ALLOWED_LENGTH = 10;
+    private const HIGH_SCORES_ALLOWED_LENGTH = 10;
 
     /**
      * An array containing all of the valid words
